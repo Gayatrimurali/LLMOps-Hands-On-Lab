@@ -20,6 +20,11 @@ The objective of these hands-on labs is to provide a comprehensive understanding
 
 1. **Monitoring and Responsible AI:** This hands-on aims for the participants to understand how to monitor LLM performance and apply responsible AI practices to ensure ethical and effective use of AI technologies.
 
+1. **Automation:** This hands-on session guides participants in setting up a new project and overseeing the delivery of a feature, focusing on project setup, implementation, testing, and communication with stakeholders.
+
+1. **LLM Performance Testing:** This hands-on lab guides participants through setting up, executing, and analyzing load tests on an Azure OpenAI model deployment to assess performance under different scenarios.
+
+
 ## Prerequisites
 
 Participants should have: Basic knowledge and understanding of the following
@@ -29,10 +34,13 @@ Participants should have: Basic knowledge and understanding of the following
 - Basic knowledge of programming languages commonly used with AI models, such as Python, for interacting with APIs and building solutions.
 - Understanding of data handling and management practices, as LLMs require data for training, evaluation, and deployment.
 - Basic knowledge of responsible AI practices and ethical considerations to ensure the models are used appropriately and ethically.
+- Basic knowledge of Github and how to manage GitHub repositories, branches, pull requests, GitHub CLI, and environment variables.
 
 ## Architecture
 
 Azure AI Studio provides a comprehensive architecture for managing and deploying Large Language Models (LLMs). **Azure OpenAI Service** offers access to advanced LLMs like GPT-4 for text generation and natural language processing. **Azure Cognitive Services** integrates additional AI capabilities such as text analytics to enhance model functionality. **Azure AI Studio resources** include the **Hub** for centralized management, **Projects** for organizing AI workflows, and **Prompt Flow Types** for creating and optimizing interactions with LLMs. **Deployments** facilitate the transition of models from development to production. This integrated architecture supports building, evaluating, and managing LLMs while ensuring efficient and scalable AI solutions.
+
+![Architecture](media/architecture1.PNG)
 
 ## Explanation of Components
 
@@ -43,7 +51,7 @@ Azure AI Studio provides a comprehensive architecture for managing and deploying
   - **Project:** Workspace within Azure AI Studio for developing and managing AI models and workflows.
   - **Prompt Flows:** Tools for designing and managing prompts used in interacting with language models, allowing customization and optimization of AI responses.
   - **Deployments:** Processes and tools for deploying trained AI models into production environments, enabling their integration into real-world applications.
-- **Azure Content Safety:** A suite of tools and services designed to help businesses and developers ensure that the content generated, shared, or consumed on their platforms adheres to safety, compliance, and ethical standards. 
+- **Azure Content Safety:** A suite of tools and services designed to help businesses and developers ensure that the content generated, shared, or consumed on their platforms adheres to safety, compliance, and ethical standards.
 
 ## Getting Started with Your Lab Environment
  
