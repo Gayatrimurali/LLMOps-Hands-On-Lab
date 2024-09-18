@@ -75,6 +75,8 @@ After completing this lab, you will be able to complete the following tasks:
 
    ![](media/custom-evaluation-dropdown.png)
 
+1. Click on **Run Anyway** when prompted.
+   
 1. On the **Batch run and Evaluate** window, in the **Basic settings**, for the **Promt_variants** option, select at least two variants to avoid reaching your GPT-4 model quota limit and click on **Next**.
 
    ![](media/custom-evaluation-basic-settings.png)
