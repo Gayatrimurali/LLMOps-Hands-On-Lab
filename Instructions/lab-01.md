@@ -31,8 +31,6 @@ After completing this lab, you will be able to complete the following tasks:
 
    ![](media/create-new-project.png)
 
-1. In the **Project details** section, enter a unique name for your project and click on **Next**.
-
 1. On the **Project details** section, enter a unique **name** for your project and select **Create a new Hub** option from the drop-down menu. Moving on, click on **Next**. 
 
    ![](media/new-project-name.png)
@@ -69,13 +67,11 @@ After completing this lab, you will be able to complete the following tasks:
 
    ![](media/1iam.png)
 
-1. In the Access Control (IAM) pane, click on the **+ Add** button at the top.
-
 1. Select **Add role assignment** from the drop-down.
 
 1. In the **Add role assignment** pane, you'll see a drop-down labeled **Role**.
 
-1. Click on the **drop-down** and select **Reader**. This role allows the user or entity to view all resources in the **resource group** but not make any changes.
+1. Click on the **drop-down**, select **Reader** and click on **Next**. This role allows the user or entity to view all resources in the **resource group** but not make any changes.
 
 1. Under the **Assign access to** section, select **Managed identity (2)**.
 
@@ -104,7 +100,7 @@ After completing this lab, you will be able to complete the following tasks:
 
 ## Task 02: Deploy Azure OpenAI Models
 
-1. Navigate to **Components > Deployments (1)** settings and click on **Create Deployment (2)** to create an OpenAI model.
+1. Navigate to **Components > Deployments (1)** settings. Click on **Deploy a model (2)** and select **Deploy base model (3)** to create an OpenAI model.
    
    ![](media/deployments-create.png)
 
@@ -112,16 +108,18 @@ After completing this lab, you will be able to complete the following tasks:
 
    ![](media/gpt-4-deployment.png)
 
-1. On the **Deploy model gpt-4** pane, accept the default settings and click on **Deploy**.
+1. On the **Deploy model gpt-4** pane, click on **Customize**.
 
    ![](media/deploy-gpt-4-model01.png)
 
+1. Change the model version to **0125-Preview (1)** and select **Standard (2)** for the deployment type. Click on **Deploy (3)**.
+   
 1. Verify that the **gpt-4** model is present in the **Deployments** section.
 
    ![](media/gpt-4-model-deployments.png)
 
-1. On the **Components > Deployments** settings and click on **Create Deployment** to create an OpenAI model.
-
+1. On the **Components > Deployments** settings. Click on **Deploy a model (2)** and select **Deploy base model (3)** to create an OpenAI model.
+   
 1. Select **text-embedding-ada-002** from the list of models and click on **Confirm**.
 
    ![](media/text-embedding-model.png)
@@ -149,13 +147,15 @@ After completing this lab, you will be able to complete the following tasks:
    >**Note:** Create the Content Safety resource in the same region where you have deployed the Azure AI services.
 
    - Subscription: **Select your Default Subscription (1)**
-   - Resource group: **llm-ops-1377499<inject key="Deployment-ID" enableCopy="false"/> (2)**
+   - Resource group: **llm-ops-<inject key="Deployment-ID" enableCopy="false"/> (2)**
    - Region: **East US<inject key="Region" enableCopy="false"/> (3)**
-   - Name: **content-safety-1377499<inject key="Deployment-ID" enableCopy="false"/>(4)**
+   - Name: **content-safety-<inject key="Deployment-ID" enableCopy="false"/>(4)**
    - Pricing tier: **Standard S0 (5)**
 
    ![](media/create-content-safety.png)
 
+1. Click on **Next** again.
+   
 1. On the **Identity** tab, verify that the **System-assigned managed identity Status** is turned **On**. Click on **Review + create** and then on the **Create** option.
 
    ![](media/create-content-safety-identity.png)
@@ -274,8 +274,8 @@ After completing this lab, you will be able to complete the following tasks:
    
 ## Task 06: Work with an Open Source LLM Model
 
-1. Now let's test an **open-source Llama2 model** from Meta. Navigate to **Components > Deployments (1)** settings and click on **+ Create deployment (2)** to create an **OpenAI model**.
-
+1. Now let's test an **open-source Llama2 model** from Meta. Navigate to **Components > Deployments (1)** settings. Click on **Deploy a model (2)** and select **Deploy base model (3)** to create an OpenAI model.
+   
    ![](media/deployments-create.png)
 
 1. Search for and select **Llama-2-13b-chat** from the list of models, and click on **Confirm**.
@@ -355,7 +355,7 @@ After completing this lab, you will be able to complete the following tasks:
 
    ![](media/gpt-4-model-deployments.png)
 
-1. Perform the same steps that you performed in **Task 04** by adding the same system message, applying the changes, and fetching the response. Once the response is generated, click on **Prompt flow**.
+1. Perform the same steps that you performed in **Task 05** by adding the same system message, applying the changes, and fetching the response. Once the response is generated, click on **Prompt flow**.
 
    ![](media/chat-playground-prompt-flow.png)
 
