@@ -363,6 +363,8 @@ After completing this lab, you will be able to complete the following tasks:
 
    ![](media/prompt-flow-open.png)
 
+   >**Note:** If it takes too long, refresh the page and re-enter the details and click on **prompt flow**; the prompt flow should appear right away.
+
 1. Notice how the prompt flow is created with a single node, which represents the step in the flow where the LLM model is configured.
 
    ![](media/prompt-flow-graph.png)
