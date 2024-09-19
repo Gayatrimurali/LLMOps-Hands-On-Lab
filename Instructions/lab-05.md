@@ -150,23 +150,11 @@ In this section, you will learn how to start a new project using a project templ
 
     >**Note:** At the end of its execution, the script will have created and initialized the new repository and provisioned the development environment resources, provided you set `azd_dev_env_provision` to true. During its execution, the script checks if the new repository exists and creates it if it does not. It then clones the template repository and mirrors it to the new repository. Additionally, it sets the default branch for the new repository.
 
-1. Set GitHub Environment Variables. Go to the newly created project repository and set the following GitHub environment variables and secret for three environments: `dev`, `qa`, and `prod`.
+1. Navigate to your github account. Click on the profile, click on **Your repositories (1)** and select the repository **my-rag-project (2)**.
 
-    | **Environment Variables**| Values |
-    |------------|------------|
-    | `AZURE_ENV_NAME`| rag-project-dev| 
-    | `AZURE_LOCATION`| <inject key="Location"></inject>|
-    | `AZURE_SUBSCRIPTION_ID`| your-subscription-id|
+1. Inside my-rag-project repository, click on **Settings (1)** and click on **Environments (2)** from the left pane. You can observe there are three pre-created environments  **prod**, **qa**, and **dev**.
 
-1. Open GitHub with the credentials, and select **Settings**. From the left navigation pane select **Environments**, after creating the variables and secret, your Environments page should resemble the following example:
-   
-   ![Environments Page](media/bootstrapping_environments.png)
-   
-1. Select any of the **Environments**. Below is an example of environment variable values for a development environment:
-   
-   ![Environment Variables](media/bootstrapping_env_vars.png)
-   
-1. Select the `AZURE_CREDENTIALS` secret for three environments: `dev`, `qa`, and `prod`, paste the format as follows, and update the values according to it:
+1. Click on prod. Scroll down and pause when you reach **AZURE_CREDENTIALS** secret under **Environment secret** tab. Click on it and paste the following format as follows, and update the values according to it:
     
    ```json
    {
@@ -179,13 +167,17 @@ In this section, you will learn how to start a new project using a project templ
 
     ![Environment Variables](media/enviornment-variables.png)
 
-   >**Note:** You can check all the values on the **Environment > Service Principal Details** page.
+   >**Note:** You can get all the values on the **Environment > Service Principal Details** page.
 
-1. Select **Actions** and ensure that GitHub Actions are enabled in your repository.
+1. After updating Azure Credentials, navigate back and scroll down to update the following environment variables with the respective values.
+   
+    | **Environment Variables**| Values |
+    |------------|------------|
+    | `AZURE_ENV_NAME`| rag-project-dev| 
+    | `AZURE_LOCATION`| <inject key="Location"></inject>|
+    | `AZURE_SUBSCRIPTION_ID`| your-subscription-id|
 
-    ![Environment Variables](media/enable_github_actions.png)
-
-That's all! Your new project is now bootstrapped and ready to go.
+1. Repeat the same for **qa** and **dev** environments.
 
 ## Exercise 02: Delivering a New Feature
 
@@ -201,7 +193,7 @@ Follow the steps below to deliver this feature from the beginning of development
 
     ```bash
     git clone https://github.com/github-cloudlabsuser-xxxx/my-rag-project.git
-    cd my-rag-project.git
+    cd my-rag-project
     ```
 
     >**Note:** Replace xxxx with your GitHub username.
@@ -241,6 +233,7 @@ Upon completing the feature, create a Pull Request (PR) to merge changes from th
 
     ```bash
     git add .
+    git config --global user.email "enter your github user e-mail"
     git commit -m "Feature X complete"
     git push origin feature/feature_x
     ```
