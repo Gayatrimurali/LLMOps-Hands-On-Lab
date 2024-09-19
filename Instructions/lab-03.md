@@ -159,7 +159,7 @@ After completing this lab, you will be able to complete the following tasks:
 
    >**Note:** This might take a while for the deployment to succeed. Wait for the deployment status to appear as **Succeed**.
 
-   ![](media/endpoint-deployment.png)
+   ![](media/llm17.png)
 
 1. Select the **Consume** tab to see code samples that can be used to consume the deployed model in your application.
 
