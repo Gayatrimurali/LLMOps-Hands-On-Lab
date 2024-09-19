@@ -47,7 +47,7 @@ In this section, you will learn how to start a new project using a project templ
      - File share: Enter **fs<inject key="Deployment-ID" enableCopy="false"/> (5)**
      - Select **Create (6)**
 
-          ![Environments Page](media/storage-account(1).png)
+          ![Environments Page](media/llm34.png)
 
 1. Clone the repository from GitHub into a temporary directory:
 
