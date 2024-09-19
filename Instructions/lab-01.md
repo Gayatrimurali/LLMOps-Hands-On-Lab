@@ -47,7 +47,7 @@ After completing this lab, you will be able to complete the following tasks:
 
 1. Click on **Create new AI Search (1)** for the **Connect Azure AI Search** option. Enter the **name (2)** for your **Azure AI Search** and click on **Create**.
 
-   ![](media/create-new-ai-search.png)
+   ![](media/llm31.png)
 
 1. On the **Create a Hub** section, click on **Next**.
 
@@ -63,9 +63,9 @@ After completing this lab, you will be able to complete the following tasks:
 
 1. Within the selected **resource group**, in the left-hand menu, click on **Access control (IAM)**.
 
-1. In the **Access Control (IAM)** pane, click on the **+ Add** button at the top.
-
    ![](media/1iam.png)
+
+1. In the **Access Control (IAM)** pane, click on the **+ Add** button at the top.
 
 1. Select **Add role assignment** from the drop-down.
 
@@ -209,7 +209,7 @@ After completing this lab, you will be able to complete the following tasks:
 
 1. Let us run an example where the model will help us summarize and extract information from a conversation between a customer and a representative of a telco company.
 
-1. Copy the following prompt into the **System message** field of the **Chat playground** and click on **Apply changes**.
+1. Copy the following prompt into the **Give the model instructions and context** field of the **Chat playground** and click on **Apply changes**.
 
    ```
    You're an AI assistant that helps telco company to extract valuable information from their conversations by creating JSON files for each conversation transcription you receive. You always try to extract and format it as a JSON:
@@ -355,7 +355,7 @@ After completing this lab, you will be able to complete the following tasks:
 
 1. Navigate to the **gpt-4** deployment under the **Deployments** settings in your **Azure AI Studio**.
 
-   ![](media/gpt-4-model-deployments.png)
+   ![](media/llm14.png)
 
 1. Perform the same steps that you performed in **Task 05** by adding the same system message, applying the changes, and fetching the response. Once the response is generated, click on **Prompt flow**.
 
