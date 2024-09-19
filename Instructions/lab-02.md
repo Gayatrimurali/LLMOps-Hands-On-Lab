@@ -122,7 +122,7 @@ After completing this lab, you will be able to complete the following tasks:
    
    ![](media/auto-select-vm-indexes.png)
 
-1. On the **Search settings** tab, verify that the **Add vector search to this search resource** is selected.
+1. On the **Search settings** tab, verify that the **Add vector search to this search resource** is selected and click on **Next**.
 
    >**Note:** The Azure OpenAI embedding model, **text-embedding-ada-002** (Version 2), will be deployed if not already.
 
