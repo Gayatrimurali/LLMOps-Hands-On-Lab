@@ -40,7 +40,7 @@ After completing this lab, you will be able to complete the following tasks:
    - Hub name: **odl_user_<inject key="Deployment-ID" enableCopy="false"/>_ai**
    - Subscription: **Select your Default Subscription**
    - Resource group: **llm-ops-<inject key="Deployment-ID" enableCopy="false"/>**
-   - Location: **<inject key="Region" enableCopy="false"/>**
+   - Location: **<inject key="location" enableCopy="false"/>**
    - Connect Azure AI Service or Azure OpenAI: **(new)ai-odl-user_<inject key="Deployment-ID" enableCopy="false"/>_ai**
 
       ![](media/llm1.png)
