@@ -42,7 +42,7 @@ In this section, you will learn how to start a new project using a project templ
      
      - Subscription: Select the subscription (1)
      - Resource group: Select **llm-ops-<inject key="Deployment-ID" enableCopy="false"/> (2)**
-     - Region: Select **<inject key="Location"></inject> (3)**
+     - Region: Select **<inject key="location" enableCopy="false"/> (3)**
      - Storage account name: Enter **blob<inject key="Deployment-ID" enableCopy="false"/> (4)**
      - File share: Enter **fs<inject key="Deployment-ID" enableCopy="false"/> (5)**
      - Select **Create (6)**
