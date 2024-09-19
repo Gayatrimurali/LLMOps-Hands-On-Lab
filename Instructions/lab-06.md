@@ -150,10 +150,10 @@ After completing this lab, you will be able to complete the following tasks:
 
 1. Open the `benchmark_analysis.ipynb` file in Visual Studio Code. Execute each code snippet step by step and observe the output to analyze the performance results.
 
-   - Click on Install/Enable extensions when asked to choose a kernel source
-   - Choose Python Environments
-   - Select the environment
-
+   - Click on **Install/Enable extensions** when asked to **choose a kernel source**
+   - Choose **Python Environments**
+   - Select the **environment**
+     
         ![clone1](media/26-08-2024(15).png)
 
         ![clone1](media/26-08-2024(16).png)
