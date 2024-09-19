@@ -95,7 +95,7 @@ After completing this lab, you will be able to complete the following tasks:
 1. Copy the following details and store them in a notepad.
 
    - **Azure OpenAI deployment name (1)**
-   - **Azure OpenAI endpoint (2)**
+   - **Azure OpenAI resource name (2)**
    - **Azure OpenAI API key (3)**
 
       ![clone1](media/26-08-2024(11).png)
@@ -107,7 +107,7 @@ After completing this lab, you will be able to complete the following tasks:
    ```
    > **Note:** By running the above command, you are re-directed to Visual Studio Code. Click on **Yes, i trust the authors** when prompted.
 
-1. In the `benchmark.parameters` file, replace the first four lines with the values which you copied in step number 14.
+1. In the `benchmark.parameters` file, replace the first four lines with the values which you copied in step number 14. Press `Ctrl+S` to save.
 
     ```bash
     export OPENAI_API_KEY=[Your Azure OpenAI API key]
@@ -134,7 +134,7 @@ After completing this lab, you will be able to complete the following tasks:
 
    ![clone1](media/26-08-2024(14).png)
 
-1. Navigate to **Visual Studio Code** and change TEST_NAME to **paygo-gpt35-eastus-50RPM** in the benchmark.parameters file.
+1. Navigate to **Visual Studio Code** and change TEST_NAME to **paygo-gpt35-eastus-50RPM** in the benchmark.parameters file. Press `Ctrl+S` to save.
 
    ![clone1](media/26-08-2024(18).png)
 
@@ -150,11 +150,15 @@ After completing this lab, you will be able to complete the following tasks:
 
 1. Open the `benchmark_analysis.ipynb` file in Visual Studio Code. Execute each code snippet step by step and observe the output to analyze the performance results.
 
-   ![clone1](media/26-08-2024(15).png)
+   - Click on Install/Enable extensions when asked to choose a kernel source
+   - Choose Python Environments
+   - Select the environment
 
-   ![clone1](media/26-08-2024(16).png)
+        ![clone1](media/26-08-2024(15).png)
 
-   ![clone1](media/26-08-2024(17).png)
+        ![clone1](media/26-08-2024(16).png)
+
+        ![clone1](media/26-08-2024(17).png)
 
 ## Summary
 
