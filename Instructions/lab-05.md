@@ -73,6 +73,8 @@ In this section, you will learn how to start a new project using a project templ
     code .
     ```
 
+   >**Note:** Switch to Classic Powershell when prompted.
+   
    - GitHub Repo Creation (related to the new repository to be created)
      - `github_username`: Your GitHub **username**.
      - `github_use_ssh`: Set **false** to use [HTTPS](https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls).
