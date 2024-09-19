@@ -40,7 +40,7 @@ After completing this lab, you will be able to complete the following tasks:
   
 1. Now that the flow has been created, we need a runtime to execute it in the **Prompt flow.** Select **Start Compute Session** to start a runtime to run your flow.
 
-    ![](media/multi-round-start-compute.png)
+    ![](media/llm15.png)
 
    >**Note:** It will take 1-3 minutes to start the session.
 
@@ -70,7 +70,7 @@ After completing this lab, you will be able to complete the following tasks:
 
 1. In **Azure AI Studio**, navigate to **Tools > Prompt flow** and click on **+ Create**.
 
-   ![](media/0.png)
+   ![](media/llm16.png)
 
 1. In the **flow creation** window, select the **Chat flow** filter in the **Explore gallery** section and click on **Clone** for the **Multi-Round Q&A on Your Data**.
 
@@ -121,6 +121,8 @@ After completing this lab, you will be able to complete the following tasks:
 1. Back on the **Create an index** window, on the **Index settings** tab, accept the default values for name and auto-select VM, and click on **Next**.
    
    ![](media/auto-select-vm-indexes.png)
+
+   >**Note:** The name of the indexer may differ.
 
 1. On the **Search settings** tab, verify that the **Add vector search to this search resource** is selected and click on **Next**.
 
