@@ -75,6 +75,8 @@ After completing this lab, you will be able to complete the following tasks:
 
    ![](media/custom-evaluation-dropdown.png)
 
+1. Click on **Run Anyway** when prompted.
+   
 1. On the **Batch run and Evaluate** window, in the **Basic settings**, for the **Promt_variants** option, select at least two variants to avoid reaching your GPT-4 model quota limit and click on **Next**.
 
    ![](media/custom-evaluation-basic-settings.png)
@@ -143,11 +145,10 @@ After completing this lab, you will be able to complete the following tasks:
 
 1. On the **Basic settings** tab, configure the basic settings to deploy the endpoint in the deployment wizard, and click on **Review + create**.
 
-   - Virtual Machine: **Standard_E2s_v3** or select any other size.
    - Endpoint: **New** 
    - Endpoint Name: **odl-user-<inject key="Deployment-ID" enableCopy="false"/>-xxxx-xxxx**
    - Deployment name: **odl-user-<inject key="Deployment-ID" enableCopy="false"/>-xxxx-xxxx**
-   - Virtual Machine: **Standard_E2s_v3** or any select the size.
+   - Virtual Machine: **Standard_E2s_v3** or select any other size.
    - Instance count: **1**
 
    ![](media/multi-flow-deploy-basic-settings.png)
@@ -158,7 +159,7 @@ After completing this lab, you will be able to complete the following tasks:
 
    >**Note:** This might take a while for the deployment to succeed. Wait for the deployment status to appear as **Succeed**.
 
-   ![](media/endpoint-deployment.png)
+   ![](media/llm17.png)
 
 1. Select the **Consume** tab to see code samples that can be used to consume the deployed model in your application.
 

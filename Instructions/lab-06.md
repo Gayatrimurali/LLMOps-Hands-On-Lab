@@ -16,7 +16,7 @@ After completing this lab, you will be able to complete the following tasks:
 
 ## Task 01: Azure OpenAI Benchmarking Tool
 
-1. To open Git Bash, click on the Search bar from the VM desktop, type **Git Bash**, and select it from the results. 
+1. To open Git Bash, click on the Search bar from the VM desktop, **type Git Bash (1)**, and **select (2)** it from the results. 
 
    ![Git](media/26-08-2024(1).png)
 
@@ -86,9 +86,13 @@ After completing this lab, you will be able to complete the following tasks:
 
    ![clone1](media/26-08-2024(20).png)
 
-1. Leave the value as default, and click on **Deploy**.
+1. Search and select **gpt-35-turbo-16k**. Click on **Confirm**.
 
-   ![clone1](media/26-08-2024(22).png)
+   ![Environment Variables](media/llm24.png)
+   
+1. Leave the values as default, and click on **Deploy**.
+
+   ![clone1](media/llm25.png)
 
 1. Copy the following details and store them in a notepad.
 
@@ -98,13 +102,16 @@ After completing this lab, you will be able to complete the following tasks:
 
       ![clone1](media/26-08-2024(11).png)
 
-9. Run the following command to open the repo in the code editor: 
+1. Navigate back to the Git Bash tool and run the following command to open the repo in the code editor: 
 
    ```bash
    code .
    ```
+   > **Note:** By running the above command, you are re-directed to Visual Studio Code. Click on **Yes, i trust the authors** when prompted.
 
-10. In the `benchmark.parameters` file, replace the first four lines with the values which you copied in step number 14.
+      ![Environment Variables](media/llm26.png)
+
+1. In the `benchmark.parameters` file, replace the first three lines with the values which you copied in step number 14. Press `Ctrl+S` to save.
 
     ```bash
     export OPENAI_API_KEY=[Your Azure OpenAI API key]
@@ -127,11 +134,13 @@ After completing this lab, you will be able to complete the following tasks:
 
    ![clone1](media/26-08-2024(13).png)
 
-2. Go to the `gpt-35-turbo-16k` deployment, click **Edit**, increase the quota to **200K Tokens per Minute Rate Limit**, and then select **Save and close**.
+2. Go to the `gpt-35-turbo-16k` deployment, click **Edit**, increase the quota to **200K Tokens per Minute Rate Limit (1)**, and then select **Save and close (2)**.
 
-   ![clone1](media/26-08-2024(14).png)
+      ![Environment Variables](media/llm29.png)
 
-1. Navigate to **Visual Studio Code** and change TEST_NAME to **paygo-gpt35-eastus-50RPM** in the benchmark.parameters file.
+      ![Environment Variables](media/llm28.png)
+
+1. Navigate to **Visual Studio Code** and change TEST_NAME to **paygo-gpt35-eastus-50RPM** in the benchmark.parameters file. Press `Ctrl+S` to save.
 
    ![clone1](media/26-08-2024(18).png)
 
@@ -147,11 +156,15 @@ After completing this lab, you will be able to complete the following tasks:
 
 1. Open the `benchmark_analysis.ipynb` file in Visual Studio Code. Execute each code snippet step by step and observe the output to analyze the performance results.
 
-   ![clone1](media/26-08-2024(15).png)
+   - Click on **Install/Enable extensions** when asked to **choose a kernel source**.
+   - Choose **Python Environments**.
+   - Select the **environment**.
+     
+        ![clone1](media/26-08-2024(15).png)
 
-   ![clone1](media/26-08-2024(16).png)
+        ![clone1](media/26-08-2024(16).png)
 
-   ![clone1](media/26-08-2024(17).png)
+        ![clone1](media/26-08-2024(17).png)
 
 ## Summary
 

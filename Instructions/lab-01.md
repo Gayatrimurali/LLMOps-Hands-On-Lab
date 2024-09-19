@@ -31,8 +31,6 @@ After completing this lab, you will be able to complete the following tasks:
 
    ![](media/create-new-project.png)
 
-1. In the **Project details** section, enter a unique name for your project and click on **Next**.
-
 1. On the **Project details** section, enter a unique **name** for your project and select **Create a new Hub** option from the drop-down menu. Moving on, click on **Next**. 
 
    ![](media/new-project-name.png)
@@ -45,19 +43,19 @@ After completing this lab, you will be able to complete the following tasks:
    - Location: **<inject key="Region" enableCopy="false"/>**
    - Connect Azure AI Service or Azure OpenAI: **(new)ai-odl-user_<inject key="Deployment-ID" enableCopy="false"/>_ai**
 
-      ![](media/create-new-hub.png)
+      ![](media/llm1.png)
 
 1. Click on **Create new AI Search (1)** for the **Connect Azure AI Search** option. Enter the **name (2)** for your **Azure AI Search** and click on **Create**.
 
-   ![](media/create-new-ai-search.png)
+   ![](media/llm31.png)
 
 1. On the **Create a Hub** section, click on **Next**.
 
-   ![](media/create-hub-next.png)
+   ![](media/llm32.png)
 
 1. In the **Review and finish** section, review your Azure AI services, click on **Create a project,** and wait for the deployments to succeed.
 
-   ![](media/review-create-project.png)
+   ![](media/llm33.png)
 
 1. You can also navigate to your **Resource groups** section in the Azure portal to verify the resources deployed.
 
@@ -65,17 +63,15 @@ After completing this lab, you will be able to complete the following tasks:
 
 1. Within the selected **resource group**, in the left-hand menu, click on **Access control (IAM)**.
 
-1. In the **Access Control (IAM)** pane, click on the **+ Add** button at the top.
-
    ![](media/1iam.png)
 
-1. In the Access Control (IAM) pane, click on the **+ Add** button at the top.
+1. In the **Access Control (IAM)** pane, click on the **+ Add** button at the top.
 
 1. Select **Add role assignment** from the drop-down.
 
 1. In the **Add role assignment** pane, you'll see a drop-down labeled **Role**.
 
-1. Click on the **drop-down** and select **Reader**. This role allows the user or entity to view all resources in the **resource group** but not make any changes.
+1. Click on the **drop-down**, select **Reader** and click on **Next**. This role allows the user or entity to view all resources in the **resource group** but not make any changes.
 
 1. Under the **Assign access to** section, select **Managed identity (2)**.
 
@@ -104,31 +100,35 @@ After completing this lab, you will be able to complete the following tasks:
 
 ## Task 02: Deploy Azure OpenAI Models
 
-1. Navigate to **Components > Deployments (1)** settings and click on **Create Deployment (2)** to create an OpenAI model.
+1. Navigate to **Components > Deployments (1)** settings. Click on **Deploy a model (2)** and select **Deploy base model (3)** to create an OpenAI model.
    
-   ![](media/deployments-create.png)
+   ![](media/llm3.png)
 
 1. Select **gpt-4 (1)** from the list of models and click on **Confirm (2)**.
 
    ![](media/gpt-4-deployment.png)
 
-1. On the **Deploy model gpt-4** pane, accept the default settings and click on **Deploy**.
+1. On the **Deploy model gpt-4** pane, click on **Customize**.
 
-   ![](media/deploy-gpt-4-model01.png)
+   ![](media/llm4.png)
 
+1. Change the model version to **0125-Preview (1)** and select **Standard (2)** for the deployment type. Click on **Deploy (3)**.
+
+   ![](media/llm5.png)
+   
 1. Verify that the **gpt-4** model is present in the **Deployments** section.
 
    ![](media/gpt-4-model-deployments.png)
 
-1. On the **Components > Deployments** settings and click on **Create Deployment** to create an OpenAI model.
-
+1. On the **Components > Deployments** settings. Click on **Deploy a model (2)** and select **Deploy base model (3)** to create an OpenAI model.
+   
 1. Select **text-embedding-ada-002** from the list of models and click on **Confirm**.
 
    ![](media/text-embedding-model.png)
 
 1. On the **Deploy model text-embedding-ada-002** pane, accept the default settings and click on **Deploy**.
 
-   ![](media/deploy-text-embedding-model.png)
+   ![](media/llm11.png)
 
 1. Verify that the **text-embedding-ada-002** model is present in the **Deployments** section.
 
@@ -149,13 +149,15 @@ After completing this lab, you will be able to complete the following tasks:
    >**Note:** Create the Content Safety resource in the same region where you have deployed the Azure AI services.
 
    - Subscription: **Select your Default Subscription (1)**
-   - Resource group: **llm-ops-1377499<inject key="Deployment-ID" enableCopy="false"/> (2)**
-   - Region: **East US<inject key="Region" enableCopy="false"/> (3)**
-   - Name: **content-safety-1377499<inject key="Deployment-ID" enableCopy="false"/>(4)**
+   - Resource group: **llm-ops-<inject key="Deployment-ID" enableCopy="false"/> (2)**
+   - Region: **<inject key="Region" enableCopy="false"/> (3)**
+   - Name: **content-safety-<inject key="Deployment-ID" enableCopy="false"/>(4)**
    - Pricing tier: **Standard S0 (5)**
 
    ![](media/create-content-safety.png)
 
+1. Click on **Next** again.
+   
 1. On the **Identity** tab, verify that the **System-assigned managed identity Status** is turned **On**. Click on **Review + create** and then on the **Create** option.
 
    ![](media/create-content-safety-identity.png)
@@ -199,15 +201,15 @@ After completing this lab, you will be able to complete the following tasks:
 
 1. In your **Azure AI Studio**, navigate to the **gpt-4** deployment under the **Deployments** option.
 
-   ![](media/gpt-4-model-deployments.png)
+   ![](media/llm14.png)
 
 1. On the **gpt-4** deployment details, click on **Open in playground**.
 
-   ![](media/open-in-playground.png)
+   ![](media/llm6.png)
 
 1. Let us run an example where the model will help us summarize and extract information from a conversation between a customer and a representative of a telco company.
 
-1. Copy the following prompt into the **System message** field of the **Chat playground** and click on **Apply changes**.
+1. Copy the following prompt into the **Give the model instructions and context** field of the **Chat playground** and click on **Apply changes**.
 
    ```
    You're an AI assistant that helps telco company to extract valuable information from their conversations by creating JSON files for each conversation transcription you receive. You always try to extract and format it as a JSON:
@@ -222,7 +224,7 @@ After completing this lab, you will be able to complete the following tasks:
    Only extract information that you're sure of. If you're unsure, write "Unknown/Not Found" in the JSON file.
    ```
 
-   ![](media/gpt-4-apply-changes.png)
+   ![](media/llm7.png)
 
    >**Note:** If you receive an **"Update systems message?"** pop-up, enable **Do not show this again,** and click on **Continue**.
 
@@ -254,7 +256,7 @@ After completing this lab, you will be able to complete the following tasks:
    Agent: Thank you, Mr. Pérez. Have a good day. Goodbye.
    ```
 
-   ![](media/chat-msg-send.png)
+   ![](media/llm8.png)
 
 1. You will see a result generated by the model similar to the one shown in the image below. Notice that the model has correctly followed the instructions indicated in the **System message** field.
 
@@ -270,13 +272,13 @@ After completing this lab, you will be able to complete the following tasks:
    }
    ```
    
-   ![](media/chat-msg-result.png)
+   ![](media/llm9.png)
    
 ## Task 06: Work with an Open Source LLM Model
 
-1. Now let's test an **open-source Llama2 model** from Meta. Navigate to **Components > Deployments (1)** settings and click on **+ Create deployment (2)** to create an **OpenAI model**.
-
-   ![](media/deployments-create.png)
+1. Now let's test an **open-source Llama2 model** from Meta. Navigate to **Components > Deployments (1)** settings. Click on **Deploy a model (2)** and select **Deploy base model (3)** to create an OpenAI model.
+   
+   ![](media/llm3.png)
 
 1. Search for and select **Llama-2-13b-chat** from the list of models, and click on **Confirm**.
 
@@ -353,15 +355,17 @@ After completing this lab, you will be able to complete the following tasks:
 
 1. Navigate to the **gpt-4** deployment under the **Deployments** settings in your **Azure AI Studio**.
 
-   ![](media/gpt-4-model-deployments.png)
+   ![](media/llm14.png)
 
-1. Perform the same steps that you performed in **Task 04** by adding the same system message, applying the changes, and fetching the response. Once the response is generated, click on **Prompt flow**.
+1. Perform the same steps that you performed in **Task 05** by adding the same system message, applying the changes, and fetching the response. Once the response is generated, click on **Prompt flow**.
 
    ![](media/chat-playground-prompt-flow.png)
 
 1. On **"Orchestrate and customize this setup with prompt flow,"** click on **Open**. This will create a new prompt flow.
 
    ![](media/prompt-flow-open.png)
+
+   >**Note:** If it takes too long, refresh the page and re-enter the details and click on **prompt flow**; the prompt flow should appear right away.
 
 1. Notice how the prompt flow is created with a single node, which represents the step in the flow where the LLM model is configured.
 
@@ -402,6 +406,8 @@ After completing this lab, you will be able to complete the following tasks:
    ```
 
    ![](media/prompt-flow-chat-response.png)
+
+   >**Note:** Please press Enter if the send icon is not visible.
 
 ## Summary
 
