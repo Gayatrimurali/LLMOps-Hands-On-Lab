@@ -34,18 +34,20 @@ In this section, you will learn how to start a new project using a project templ
 
         ![Environments Page](media/getting-started-01.png)
 
-   - On **Mount storage account** pop-up, select **I want to create a storage account (1)**. Select **Next (2)**.
+1. On **Mount storage account** pop-up, select **I want to create a storage account (1)**. Select **Next (2)**.
      
-        ![Environments Page](media/mount-storage-account.png)
+   ![Environments Page](media/mount-storage-account.png)
 
-     - On the **Create storage account** pop-up, enter all the details:-
+1. On the **Create storage account** pop-up, enter all the details:-
+     
      - Subscription: Select the subscription (1)
      - Resource group: Select **llm-ops-<inject key="Deployment-ID" enableCopy="false"/> (2)**
      - Region: Select **<inject key="Location"></inject> (3)**
      - Storage account name: Enter **blob<inject key="Deployment-ID" enableCopy="false"/> (4)**
      - File share: Enter **fs<inject key="Deployment-ID" enableCopy="false"/> (5)**
      - Select **Create (6)**
-        ![Environments Page](media/storage-account(1).png)
+
+          ![Environments Page](media/storage-account(1).png)
 
 1. Clone the repository from GitHub into a temporary directory:
 
@@ -93,8 +95,6 @@ In this section, you will learn how to start a new project using a project templ
      - `azd_dev_env_subscription`: Your subscription ID.
      - `azd_dev_env_location`: The Azure region for your dev environment, enter <inject key="Location"></inject>.
 
-        > **Note:** The dev environment resources will be created in the selected subscription and region. This decision should consider the quota available for the resources to be created in the region, as well as the fact that some resources have specific features enabled only in certain regions. Therefore, ensure that the resources to be created by the IaC of your template project have quota and availability in the chosen subscription and region. More information about the resources to be created can be found on the template page, as shown in this project template example: [LLMOps Project Template Resources](https://github.com/Azure/llmops-project-template/blob/main/README.md#project-resources).
-
         >**Note:** Here is an example of the `bootstrap.properties` file:
 
         ```properties
@@ -116,41 +116,43 @@ In this section, you will learn how to start a new project using a project templ
    ```
    >**Note:** When asked, open the link and choose the account. 
 
-   - Log in to Azure Developer CLI:
+1. Log in to Azure Developer CLI:
 
         ```sh
         azd auth login
         ```
 
-   - Log in to GitHub CLI:
+1. Log in to GitHub CLI:
 
         ```sh
         gh auth login
         ```
+1. After running the above command, follow the steps that are mentioned in the Azure CLI to complete the authentication:
+   
+   - **What account do you want to log into?**:  select **GitHub.com**
+   - **What is your preferred protocol for Git operations?**: select **HTTPS**
+   - **Authenticate Git with your GitHub credentials?**: select **Yes**
+   - **How would you like to authenticate GitHub CLI?**: select **Login with a web browser**
+   - First, copy your one-time code
+   - Press Enter to open github.com in your browser. 
+   - Press **CTRL and Click** on the following link: https://github.com/login/device.
+   - On the **Device Activation** page, select **Continue**.
 
-        >**Note:** Follow the steps that are mentioned in the Azure CLI to complete the authentication:
-        > 1. **What account do you want to log into?**:  select **GitHub.com**
-        > 2. **What is your preferred protocol for Git operations?**: select **HTTPS**
-        > 3. **Authenticate Git with your GitHub credentials?**: select **Yes**
-        > 4. **How would you like to authenticate GitHub CLI?**: select **Login with a web browser**
-        > 5. First, copy your one-time code
-        > 6. Press Enter to open github.com in your browser. 
-        > 7. Press **CTRL and Click** on the following link: https://github.com/login/device.
-        > 8. On the **Device Activation** page, select **Continue**.
         ![](media/github-continue.png)
-        > 9. Paste the activation code that you copied from the Azure CLI page.
-        > 10. On the **Authorize GitHub CLI** page, select **Authorize github**.
-        > 11. Navigate back to the **Azure CLI** you'll see that you are logged in.
 
-1. Run the Bootstrap Script. Run the appropriate script for your environment.
+   - Paste the activation code that you copied from the Azure CLI page.
+   - On the **Authorize GitHub CLI** page, select **Authorize github**.
+   - Navigate back to the **Azure CLI** you'll see that you are logged in.
+
+1. Run the following command to run the Bootstrap Script.
 
     ```PowerShell
     .\bootstrap.ps1
     ```
 
-    >**Note:** At the end of its execution, the script will have created and initialized the new repository and provisioned the development environment resources, provided you set `azd_dev_env_provision` to true. During its execution, the script checks if the new repository exists and creates it if it does not. It then clones the template repository and mirrors it to the new repository. Additionally, it sets the default branch for the new repository.
-
 1. Navigate to your github account. Click on the profile, click on **Your repositories (1)** and select the repository **my-rag-project (2)**.
+
+
 
 1. Inside my-rag-project repository, click on **Settings (1)** and click on **Environments (2)** from the left pane. You can observe there are three pre-created environments  **prod**, **qa**, and **dev**.
 
@@ -222,8 +224,6 @@ The workflow starts by creating a feature branch named `feature/feature_x` from 
     ```
 
     ![Git Workflow](media/githubrepo.png)
-
-This ensures the new feature is developed in isolation, maintaining the integrity of the project's `develop` branch and prompt flow.
 
 ### Task 03: Pull Request (PR) to `develop`
 
