@@ -40,11 +40,11 @@ In this section, you will learn how to start a new project using a project templ
 
      - On the **Create storage account** pop-up, enter all the details:-
      - Subscription: Select the subscription (1)
-     - Resource group: Select **llm-ops-<inject key="DeploymentID" enableCopy="false"/> (2)**
+     - Resource group: Select **llm-ops-<inject key="Deployment-ID" enableCopy="false"/> (2)**
      - Region: Select **<inject key="Location"></inject> (3)**
-     - Storage account name: Enter **blob<inject key="DeploymentID" enableCopy="false"/> (4)**
-     - File share: Enter **fs<inject key="DeploymentID" enableCopy="false"/> (5)**
-     - Select **Next (6)**
+     - Storage account name: Enter **blob<inject key="Deployment-ID" enableCopy="false"/> (4)**
+     - File share: Enter **fs<inject key="Deployment-ID" enableCopy="false"/> (5)**
+     - Select **Create (6)**
         ![Environments Page](media/storage-account(1).png)
 
 1. Clone the repository from GitHub into a temporary directory:
