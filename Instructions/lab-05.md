@@ -103,13 +103,14 @@ In this section, you will learn how to start a new project using a project templ
    ```sh
    az login
    ```
-   >**Note:** When asked, open the link and choose the account. 
+   >**Note:** When prompted, open the link and select your account.
 
 1. Log in to Azure Developer CLI:
 
         ```sh
         azd auth login
         ```
+   >**Note:** When prompted, open the link and select your account.
 
 1. Log in to GitHub CLI:
 
@@ -140,7 +141,6 @@ In this section, you will learn how to start a new project using a project templ
     ```
 
 1. Navigate to your github account. Click on the profile, click on **Your repositories (1)** and select the repository **my-rag-project (2)**.
-
 
 
 1. Inside my-rag-project repository, click on **Settings (1)** and click on **Environments (2)** from the left pane. You can observe there are three pre-created environments  **prod**, **qa**, and **dev**.
