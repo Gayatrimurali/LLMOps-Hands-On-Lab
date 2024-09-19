@@ -114,6 +114,7 @@ In this section, you will learn how to start a new project using a project templ
    ```sh
    az login
    ```
+   >**Note:** When asked, open the link and choose the account. 
 
    - Log in to Azure Developer CLI:
 
