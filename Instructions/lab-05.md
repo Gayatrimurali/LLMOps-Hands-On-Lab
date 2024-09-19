@@ -77,37 +77,26 @@ In this section, you will learn how to start a new project using a project templ
 
    >**Note:** Switch to Classic Powershell when prompted.
    
-   - GitHub Repo Creation (related to the new repository to be created)
-     - `github_username`: Your GitHub **username**.
-     - `github_use_ssh`: Set **false** to use [HTTPS](https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls).
-     - `github_template_repo`: The project template repository, enter *azure/llmops-project-template*.
-     - `github_new_repo`: The bootstrapped project repo to be created, enter *githubusername/my-rag-project*.
-     - `github_new_repo_visibility`: Visibility of the new repository, choose **public**.
+1. Add the following details inside the code editor:
 
-        > For private or internal repositories, you must use GitHub Pro, GitHub Team, or GitHub Enterprise.
+   - **GitHub Repo Creation (related to the new repository to be created)**
 
-   - **Dev Environment Provision Properties**
-     - `azd_dev_env_provision`: Set to **true** to provision a development environment.
-     
-          > If you set it to **false**, you will need to manually create the environment for the project.
+    | Settings | Values |
+    |  -- | -- |
+    | `github_username` | Your GitHub **username** |
+    | `github_use_ssh` | Set **false**|
+    | `github_template_repo` | The project template repository, enter *azure/llmops-project-template* |
+    | `github_new_repo` | The bootstrapped project repo to be created, enter *githubusername/my-rag-project* |
+    | `github_new_repo_visibility` | Visibility of the new repository, choose **public** |
 
-     - `azd_dev_env_name`: The name of the development environment, enter *rag-project-dev*.
-     - `azd_dev_env_subscription`: Your subscription ID.
-     - `azd_dev_env_location`: The Azure region for your dev environment, enter <inject key="Location"></inject>.
+    - **Dev Environment Provision Properties**
 
-        >**Note:** Here is an example of the `bootstrap.properties` file:
-
-        ```properties
-        github_username="<git-username>"
-        github_use_ssh="false"
-        github_template_repo="azure/llmops-project-template"
-        github_new_repo="<git-username>/my-rag-project"
-        github_new_repo_visibility="public"
-        azd_dev_env_provision="true"
-        azd_dev_env_name="rag-project-dev"
-        azd_dev_env_subscription="<subscription-id>"
-        azd_dev_env_location="<rg-location>"
-        ```
+    | Settings | Values |
+    |  -- | -- |      
+    | `azd_dev_env_provision` | Set to **true** to provision a development environment |
+    | `azd_dev_env_name` | The name of the development environment, enter *rag-project-dev* |
+    | `azd_dev_env_subscription` |  Your subscription ID |
+    | `azd_dev_env_location` | The Azure region for your dev environment, enter <inject key="Location"></inject> |
 
 1. Authenticate with Azure and GitHub and log in to Azure CLI:
 
