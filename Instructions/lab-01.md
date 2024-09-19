@@ -51,11 +51,11 @@ After completing this lab, you will be able to complete the following tasks:
 
 1. On the **Create a Hub** section, click on **Next**.
 
-   ![](media/create-hub-next.png)
+   ![](media/llm32.png)
 
 1. In the **Review and finish** section, review your Azure AI services, click on **Create a project,** and wait for the deployments to succeed.
 
-   ![](media/review-create-project.png)
+   ![](media/llm33.png)
 
 1. You can also navigate to your **Resource groups** section in the Azure portal to verify the resources deployed.
 
