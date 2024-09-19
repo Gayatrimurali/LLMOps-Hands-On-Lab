@@ -405,6 +405,8 @@ After completing this lab, you will be able to complete the following tasks:
 
    ![](media/prompt-flow-chat-response.png)
 
+   >**Note:** Please press Enter if the send icon is not visible.
+
 ## Summary
 
 In this lab, you have performed  the following tasks:
