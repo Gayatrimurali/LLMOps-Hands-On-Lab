@@ -152,7 +152,7 @@ In this section, you will learn how to start a new project using a project templ
 
    ![](media/llm18.png)
 
-1. Click on **prod**. Scroll down and pause when you reach **AZURE_CREDENTIALS** secret under **Environment secret** section. Click on it and paste the following format as follows, and update the values according to it:
+1. Click on **prod**. Scroll down and pause when you reach **AZURE_CREDENTIALS** secret under **Environment secrets** section. Click on it and paste the following format as follows, and update the values according to it:
     
    ```json
    {
@@ -171,7 +171,7 @@ In this section, you will learn how to start a new project using a project templ
 
    ![Environment Variables](media/llm30.png)
 
-1. After updating Azure Credentials, navigate back and scroll down to update the following environment variables with the respective values.
+1. After updating Azure Credentials, navigate back and scroll down to update the following **environment variables** with the respective values.
    
     | **Environment Variables**| Values |
     |------------|------------|
