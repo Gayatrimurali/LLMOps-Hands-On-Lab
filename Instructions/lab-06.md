@@ -87,10 +87,12 @@ After completing this lab, you will be able to complete the following tasks:
    ![clone1](media/26-08-2024(20).png)
 
 1. Search and select **gpt-35-turbo-16k**. Click on **Confirm**.
+
+   ![Environment Variables](media/llm24.png)
    
 1. Leave the values as default, and click on **Deploy**.
 
-   ![clone1](media/26-08-2024(22).png)
+   ![clone1](media/llm25.png)
 
 1. Copy the following details and store them in a notepad.
 
@@ -107,7 +109,9 @@ After completing this lab, you will be able to complete the following tasks:
    ```
    > **Note:** By running the above command, you are re-directed to Visual Studio Code. Click on **Yes, i trust the authors** when prompted.
 
-1. In the `benchmark.parameters` file, replace the first four lines with the values which you copied in step number 14. Press `Ctrl+S` to save.
+      ![Environment Variables](media/llm26.png)
+
+1. In the `benchmark.parameters` file, replace the first three lines with the values which you copied in step number 14. Press `Ctrl+S` to save.
 
     ```bash
     export OPENAI_API_KEY=[Your Azure OpenAI API key]
@@ -130,9 +134,11 @@ After completing this lab, you will be able to complete the following tasks:
 
    ![clone1](media/26-08-2024(13).png)
 
-2. Go to the `gpt-35-turbo-16k` deployment, click **Edit**, increase the quota to **200K Tokens per Minute Rate Limit**, and then select **Save and close**.
+2. Go to the `gpt-35-turbo-16k` deployment, click **Edit**, increase the quota to **200K Tokens per Minute Rate Limit (1)**, and then select **Save and close (2)**.
 
-   ![clone1](media/26-08-2024(14).png)
+      ![Environment Variables](media/llm29.png)
+
+      ![Environment Variables](media/llm28.png)
 
 1. Navigate to **Visual Studio Code** and change TEST_NAME to **paygo-gpt35-eastus-50RPM** in the benchmark.parameters file. Press `Ctrl+S` to save.
 
@@ -150,9 +156,9 @@ After completing this lab, you will be able to complete the following tasks:
 
 1. Open the `benchmark_analysis.ipynb` file in Visual Studio Code. Execute each code snippet step by step and observe the output to analyze the performance results.
 
-   - Click on **Install/Enable extensions** when asked to **choose a kernel source**
-   - Choose **Python Environments**
-   - Select the **environment**
+   - Click on **Install/Enable extensions** when asked to **choose a kernel source**.
+   - Choose **Python Environments**.
+   - Select the **environment**.
      
         ![clone1](media/26-08-2024(15).png)
 
