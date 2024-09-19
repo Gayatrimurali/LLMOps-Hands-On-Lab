@@ -165,6 +165,8 @@ In this section, you will learn how to start a new project using a project templ
 
     ![Environment Variables](media/enviornment-variables.png)
 
+   ![Environment Variables](media/llm21.png)
+
    >**Note:** You can find all the values on the **Environment tab > Service Principal Details** section.
 
    ![Environment Variables](media/llm30.png)
@@ -176,6 +178,8 @@ In this section, you will learn how to start a new project using a project templ
     | `AZURE_ENV_NAME`| rag-project-dev| 
     | `AZURE_LOCATION`| <inject key="Location"></inject>|
     | `AZURE_SUBSCRIPTION_ID`| your-subscription-id|
+
+    ![Environment Variables](media/llm22.png)
 
 1. Follow the step 18 and 19 for **qa** and **dev** environments.
 
@@ -243,6 +247,8 @@ Upon completing the feature, create a Pull Request (PR) to merge changes from th
     ```
 
 1. Press **CTRL and Click** on the URL to be redirected to the GitHub page. Wait for all the pipelines to succeed.
+
+    ![Environment Variables](media/llm23.png)
 
 ### Task 04: Merge to `develop`
 
