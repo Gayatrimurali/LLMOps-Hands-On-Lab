@@ -176,7 +176,7 @@ In this section, you will learn how to start a new project using a project templ
     | **Environment Variables**| Values |
     |------------|------------|
     | `AZURE_ENV_NAME`| rag-project-dev| 
-    | `AZURE_LOCATION`| <inject key="Location"></inject>|
+    | `AZURE_LOCATION`| <inject key="location" enableCopy="false"/>|
     | `AZURE_SUBSCRIPTION_ID`| your-subscription-id|
 
     ![Environment Variables](media/llm22.png)
