@@ -145,11 +145,10 @@ After completing this lab, you will be able to complete the following tasks:
 
 1. On the **Basic settings** tab, configure the basic settings to deploy the endpoint in the deployment wizard, and click on **Review + create**.
 
-   - Virtual Machine: **Standard_E2s_v3** or select any other size.
    - Endpoint: **New** 
    - Endpoint Name: **odl-user-<inject key="Deployment-ID" enableCopy="false"/>-xxxx-xxxx**
    - Deployment name: **odl-user-<inject key="Deployment-ID" enableCopy="false"/>-xxxx-xxxx**
-   - Virtual Machine: **Standard_E2s_v3** or any select the size.
+   - Virtual Machine: **Standard_E2s_v3** or select any other size.
    - Instance count: **1**
 
    ![](media/multi-flow-deploy-basic-settings.png)
