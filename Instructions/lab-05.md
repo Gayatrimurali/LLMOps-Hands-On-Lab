@@ -85,17 +85,19 @@ In this section, you will learn how to start a new project using a project templ
     |  -- | -- |
     | `github_username` | Your GitHub **username** |
     | `github_use_ssh` | Set **false**|
-    | `github_template_repo` | The project template repository, enter *azure/llmops-project-template* |
-    | `github_new_repo` | The bootstrapped project repo to be created, enter *githubusername/my-rag-project* |
+    | `github_template_repo` | The project template repository, enter **azure/llmops-project-template** |
+    | `github_new_repo` | The bootstrapped project repo to be created, enter **githubusername/my-rag-project** |
     | `github_new_repo_visibility` | Visibility of the new repository, choose **public** |
+
+     >**Note:** Kindly use your personal GitHub account and username.
 
     - **Dev Environment Provision Properties**
 
     | Settings | Values |
     |  -- | -- |      
     | `azd_dev_env_provision` | Set to **true** to provision a development environment |
-    | `azd_dev_env_name` | The name of the development environment, enter *rag-project-dev* |
-    | `azd_dev_env_subscription` |  Your subscription ID |
+    | `azd_dev_env_name` | The name of the development environment, enter **rag-project-dev** |
+    | `azd_dev_env_subscription` |  Your **subscription ID** |
     | `azd_dev_env_location` | The Azure region for your dev environment, enter <inject key="Location"></inject> |
 
 1. Authenticate with Azure and GitHub and log in to Azure CLI:
@@ -140,12 +142,17 @@ In this section, you will learn how to start a new project using a project templ
     .\bootstrap.ps1
     ```
 
-1. Navigate to your github account. Click on the profile, click on **Your repositories (1)** and select the repository **my-rag-project (2)**.
+1. Navigate back to your github account. Click on the profile, click on **Your repositories** and select the repository **my-rag-project**.
 
+   ![](media/llm19.png)
 
-1. Inside my-rag-project repository, click on **Settings (1)** and click on **Environments (2)** from the left pane. You can observe there are three pre-created environments  **prod**, **qa**, and **dev**.
+   ![](media/llm20.png)
 
-1. Click on prod. Scroll down and pause when you reach **AZURE_CREDENTIALS** secret under **Environment secret** tab. Click on it and paste the following format as follows, and update the values according to it:
+1. Inside **my-rag-project** repository, click on **Settings (1)** and click on **Environments (2)** from the left pane. You will notice that three environments have already been created - **prod**, **qa**, and **dev** **(3)**.
+
+   ![](media/llm18.png)
+
+1. Click on **prod**. Scroll down and pause when you reach **AZURE_CREDENTIALS** secret under **Environment secret** section. Click on it and paste the following format as follows, and update the values according to it:
     
    ```json
    {
@@ -158,7 +165,9 @@ In this section, you will learn how to start a new project using a project templ
 
     ![Environment Variables](media/enviornment-variables.png)
 
-   >**Note:** You can get all the values on the **Environment > Service Principal Details** page.
+   >**Note:** You can find all the values on the **Environment tab > Service Principal Details** section.
+
+   ![Environment Variables](media/llm30.png)
 
 1. After updating Azure Credentials, navigate back and scroll down to update the following environment variables with the respective values.
    
@@ -168,7 +177,7 @@ In this section, you will learn how to start a new project using a project templ
     | `AZURE_LOCATION`| <inject key="Location"></inject>|
     | `AZURE_SUBSCRIPTION_ID`| your-subscription-id|
 
-1. Repeat the same for **qa** and **dev** environments.
+1. Follow the step 18 and 19 for **qa** and **dev** environments.
 
 ## Exercise 02: Delivering a New Feature
 
@@ -233,13 +242,7 @@ Upon completing the feature, create a Pull Request (PR) to merge changes from th
     gh pr create --base develop --head feature/feature_x --title "Feature X" --body "Description of the changes and the impact."
     ```
 
-    ![Git Workflow](media/githubragproject.png)
-
 1. Press **CTRL and Click** on the URL to be redirected to the GitHub page. Wait for all the pipelines to succeed.
-
-    >**Note:** You can also use the GitHub website to create the pull request. Remember to select `develop` as the base branch and `feature/feature_x` as the compare branch.
-    
-    > The creation of the PR triggers a PR Evaluation Pipeline to ensure that the code adheres to standards, passes unit tests, and the orchestration flow is evaluated by AI to ensure it meets quality metrics.
 
 ### Task 04: Merge to `develop`
 
