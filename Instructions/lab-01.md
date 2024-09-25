@@ -71,7 +71,7 @@ After completing this lab, you will be able to complete the following tasks:
 
 1. In the **Add role assignment** pane, you'll see a drop-down labeled **Role**.
 
-1. Click on the **drop-down**, select **Reader** and click on **Next**. This role allows the user or entity to view all resources in the **resource group** but not make any changes.
+1. Click on the **drop-down**, select **Reader** and click on **Next**. This role allows the user or entity to view all resources in the **resource group** but won't any changes.
 
 1. Under the **Assign access to** section, select **Managed identity (2)**.
 
